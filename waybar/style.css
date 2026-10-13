@@ -1,0 +1,138 @@
+@define-color void #000000;
+@define-color obsidian #080B14;
+@define-color midnight #1A2433;
+@define-color wolf #3382F6;
+@define-color silver #94A3B8;
+@define-color white #E8EEF7;
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+    font-weight: 500;
+}
+
+window#waybar {
+    background: transparent;
+    color: @white;
+}
+
+tooltip {
+    background: rgba(8, 11, 20, 0.96);
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(8, 11, 20, 0.78);
+    border: 1px solid rgba(148, 163, 184, 0.20);
+    border-radius: 13px;
+    padding: 3px 6px;
+}
+
+.modules-left {
+    margin-left: 2px;
+}
+
+.modules-center {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.modules-right {
+    margin-right: 2px;
+}
+
+#custom-brand {
+    color: @white;
+    letter-spacing: 1.5px;
+    padding: 0 12px;
+}
+
+#custom-brand:hover {
+    color: @wolf;
+}
+
+#workspaces {
+    margin-left: 5px;
+}
+
+#workspaces button {
+    color: @silver;
+    background: transparent;
+    padding: 0 8px;
+    margin: 0 2px;
+    border-radius: 9px;
+}
+
+#workspaces button.active {
+    color: @white;
+    background: rgba(51, 130, 246, 0.20);
+    border: 1px solid rgba(51, 130, 246, 0.45);
+}
+
+#workspaces button.urgent {
+    color: @white;
+    background: rgba(148, 163, 184, 0.25);
+}
+
+#window {
+    color: @silver;
+}
+
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#battery,
+#clock,
+#tray,
+#custom-power,
+#mpris {
+    padding: 0 8px;
+    color: @silver;
+}
+
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#clock:hover,
+#mpris:hover {
+    color: @white;
+}
+
+#network {
+    color: @wolf;
+}
+
+#custom-power {
+    color: @white;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#custom-power:hover {
+    color: @wolf;
+}
+
+#battery.warning {
+    color: @white;
+}
+
+#battery.critical {
+    color: @wolf;
+}
+
+#battery.charging {
+    color: @white;
+}

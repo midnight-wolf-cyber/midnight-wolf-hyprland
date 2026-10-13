@@ -1,0 +1,123 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 38,
+    "spacing": 5,
+    "margin-top": 8,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    "modules-left": [
+        "custom/brand",
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+        "hyprland/window"
+    ],
+
+    "modules-right": [
+        "mpris",
+        "cpu",
+        "memory",
+        "temperature",
+        "network",
+        "pulseaudio",
+        "battery",
+        "clock",
+        "tray",
+        "custom/power"
+    ],
+
+    "custom/brand": {
+        "format": "◈  MIDNIGHT WOLF",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "●",
+            "default": "○",
+            "urgent": "◆"
+        },
+        "persistent-workspaces": {
+            "*": 5
+        },
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 45,
+        "separate-outputs": true
+    },
+
+    "mpris": {
+        "format": "♫  {artist} — {title}",
+        "format-paused": "Ⅱ  {artist} — {title}",
+        "max-length": 36,
+        "tooltip-format": "{player} • {artist} — {title}",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
+
+    "cpu": {
+        "interval": 3,
+        "format": "CPU {usage}%"
+    },
+
+    "memory": {
+        "interval": 3,
+        "format": "RAM {percentage}%"
+    },
+
+    "temperature": {
+        "interval": 3,
+        "format": "TEMP {temperatureC}°",
+        "critical-threshold": 80,
+        "format-critical": "TEMP {temperatureC}°"
+    },
+
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀  {ipaddr}",
+        "format-disconnected": "󰖪  offline",
+        "tooltip-format": "{ifname} • {ipaddr} • ↓{bandwidthDownBits} ↑{bandwidthUpBits}",
+        "on-click": "nm-connection-editor"
+    },
+
+    "pulseaudio": {
+        "format": "VOL {volume}%",
+        "format-muted": "MUTE",
+        "scroll-step": 5,
+        "on-click": "pavucontrol"
+    },
+
+    "battery": {
+        "interval": 5,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "BAT {capacity}%",
+        "format-charging": "CHG {capacity}%"
+    },
+
+    "clock": {
+        "format": "{:%a %d %b  •  %I:%M %p}",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    },
+
+    "tray": {
+        "spacing": 7
+    },
+
+    "custom/power": {
+        "format": " ⏻ ",
+        "tooltip": false,
+        "on-click": "hyprlock"
+    }
+}

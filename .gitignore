@@ -1,0 +1,9 @@
+# Local wallpapers
+assets/wallpapers/*
+!assets/wallpapers/.gitkeep
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store

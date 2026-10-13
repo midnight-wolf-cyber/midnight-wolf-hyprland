@@ -1,0 +1,80 @@
+* {
+    bg: #080B14;
+    bg-alt: #0D1420;
+    fg: #E8EEF7;
+    muted: #94A3B8;
+    accent: #3382F6;
+    border: #1A2433;
+
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+window {
+    width: 720px;
+    border: 1px;
+    border-color: @border;
+    border-radius: 16px;
+    background-color: @bg;
+    padding: 22px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 18px;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @bg-alt;
+    border: 1px;
+    border-color: @border;
+    border-radius: 11px;
+    padding: 11px;
+}
+
+prompt {
+    enabled: true;
+    text-color: @accent;
+    padding: 0 10px 0 2px;
+}
+
+entry {
+    text-color: @fg;
+    placeholder: "Search the night...";
+    placeholder-color: @muted;
+}
+
+listview {
+    columns: 2;
+    lines: 5;
+    spacing: 7px;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+}
+
+element {
+    padding: 12px;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+element normal.normal {
+    text-color: @muted;
+}
+
+element selected.normal {
+    background-color: #101D31;
+    text-color: @fg;
+    border: 1px;
+    border-color: @accent;
+}
+
+element-icon {
+    size: 34px;
+    padding: 0 10px 0 0;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
